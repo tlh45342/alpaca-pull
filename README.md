@@ -8,6 +8,8 @@ Even if I request more items by setting a value, it ignores me and gives me addi
 I am making a loose assumption that this is not a fault of the Alpaca Python Module but is an artifact of the Alpca server.  I am not casting shade,
 I am just saying this is where my assumption is at this point.
 
+I will revisit this occasionally ... but this might doa.
+
 ## INSTALLATION
 
 ```bash
