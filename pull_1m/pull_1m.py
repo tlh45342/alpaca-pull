@@ -1,9 +1,10 @@
 import alpaca_trade_api as tradeapi
+import os
 
-# update 9/4/2021 11:24 AM.  Future version will be setup to pull keys from either environment or from HashiCorp vault.
-# this certainly represents why one needs to be careful when commiting code to a repository
+API_KEY = os.environ.get('API_KEY')
+API_SECRET = os.environ.get('API_SECRET')
 
-api = tradeapi.REST('x', 'x', base_url='https://paper-api.alpaca.markets')
+api = tradeapi.REST(API_KEY, API_SECRET, base_url='https://paper-api.alpaca.markets')
 
 # Get daily price data for AAPL over the last 5 trading days.
 barset = api.get_barset('ILMN', 'day', limit=1, start='2021-02-12', end='2021-02-13')
